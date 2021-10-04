@@ -115,7 +115,7 @@ namespace DB4ODemo
             this.dgvPilot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPilot.Location = new System.Drawing.Point(13, 220);
             this.dgvPilot.Name = "dgvPilot";
-            this.dgvPilot.Size = new System.Drawing.Size(775, 218);
+            this.dgvPilot.Size = new System.Drawing.Size(824, 218);
             this.dgvPilot.TabIndex = 2;
             this.dgvPilot.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPilot_CellClick);
             // 
@@ -157,7 +157,7 @@ namespace DB4ODemo
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(666, 26);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 45);
+            this.button3.Size = new System.Drawing.Size(175, 45);
             this.button3.TabIndex = 9;
             this.button3.Text = "SEARCH BY NAME";
             this.button3.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@ namespace DB4ODemo
             this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(666, 111);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 45);
+            this.button4.Size = new System.Drawing.Size(175, 45);
             this.button4.TabIndex = 10;
             this.button4.Text = "SEARCH BY POINT";
             this.button4.UseVisualStyleBackColor = true;
@@ -196,7 +196,7 @@ namespace DB4ODemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(849, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
