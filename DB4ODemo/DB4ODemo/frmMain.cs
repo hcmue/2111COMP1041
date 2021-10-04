@@ -1,4 +1,5 @@
 ﻿using Db4objects.Db4o;
+using Db4objects.Db4o.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,6 +92,26 @@ namespace DB4ODemo
             var pilotFilter = new Pilot(0, txtName.Text);
             var filterResult = db.QueryByExample(pilotFilter);
             dgvPilot.DataSource = filterResult;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //Tìm gần đúng theo tên
+            IList<Pilot> result = db.Query(delegate (Pilot pilot) {
+                if (txtName.Text.Trim().Length == 0) return true;
+                return pilot.Name.ToLower().Contains(txtName.Text.Trim().ToLower());
+            });
+            dgvPilot.DataSource = result.ToList();
+        }
+
+        private void brnLinqQuery_Click(object sender, EventArgs e)
+        {
+            IEnumerable<Pilot> pilots = from Pilot p in db
+                         where p.Name.ToLower().Contains(txtName.Text.Trim().ToLower())
+                         orderby p.Point
+                         select p;
+
+            dgvPilot.DataSource = pilots.ToList();
         }
     }
 }
