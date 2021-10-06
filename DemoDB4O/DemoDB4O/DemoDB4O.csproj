@@ -36,6 +36,9 @@
     <Reference Include="Db4objects.Db4o">
       <HintPath>D:\Download\net-4.0\Db4objects.Db4o.dll</HintPath>
     </Reference>
+    <Reference Include="Db4objects.Db4o.Linq">
+      <HintPath>D:\Download\net-4.0\Db4objects.Db4o.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="Db4objects.Db4o.NativeQueries">
       <HintPath>D:\Download\net-4.0\Db4objects.Db4o.NativeQueries.dll</HintPath>
     </Reference>

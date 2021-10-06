@@ -1,4 +1,5 @@
 ﻿using Db4objects.Db4o;
+using Db4objects.Db4o.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -97,6 +98,20 @@ namespace DemoDB4O
             IList<Pilot> result = db.Query(delegate (Pilot pilot) {
                 return pilot.Name.ToLower().Contains(txtName.Text.ToLower());
             });
+            dgvPilot.DataSource = result.ToList();
+        }
+
+        private void txtPoint_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnLinqSearch_Click(object sender, EventArgs e)
+        {
+            IEnumerable<Pilot> result = from Pilot pilot in db
+                                        where pilot.Name.ToLower().Contains(txtName.Text.ToLower())
+                                        && pilot.Point >= double.Parse(txtPoint.Text)
+                                        select pilot;
             dgvPilot.DataSource = result.ToList();
         }
     }

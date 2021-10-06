@@ -42,6 +42,7 @@ namespace DemoDB4O
             this.button3 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.BtnLinqSearch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPilot)).BeginInit();
             this.SuspendLayout();
@@ -116,6 +117,7 @@ namespace DemoDB4O
             this.txtPoint.Name = "txtPoint";
             this.txtPoint.Size = new System.Drawing.Size(257, 26);
             this.txtPoint.TabIndex = 2;
+            this.txtPoint.TextChanged += new System.EventHandler(this.txtPoint_TextChanged);
             // 
             // dgvPilot
             // 
@@ -184,6 +186,17 @@ namespace DemoDB4O
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // BtnLinqSearch
+            // 
+            this.BtnLinqSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLinqSearch.Location = new System.Drawing.Point(563, 145);
+            this.BtnLinqSearch.Name = "BtnLinqSearch";
+            this.BtnLinqSearch.Size = new System.Drawing.Size(129, 38);
+            this.BtnLinqSearch.TabIndex = 3;
+            this.BtnLinqSearch.Text = "LINQ SEARCH";
+            this.BtnLinqSearch.UseVisualStyleBackColor = true;
+            this.BtnLinqSearch.Click += new System.EventHandler(this.BtnLinqSearch_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +204,7 @@ namespace DemoDB4O
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnLinqSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -222,6 +236,7 @@ namespace DemoDB4O
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button BtnLinqSearch;
     }
 }
 
